@@ -1,0 +1,92 @@
+body{
+    background-color: #ECF2FF;
+    margin: 0;
+}
+
+#left-div{
+    width: 50%;
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    background-color: transparent;
+    float: left; /* Floats the div to the left */
+}
+
+#right-div{
+    width: 50%;
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    background-color: transparent;
+    float: left; /* Floats the div to the left */
+}
+
+#mypic1{
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    height: 80%;
+    /* padding-top: 5vw; */
+    /* padding-left: 10vw; */
+    /* z-index: 10; */
+}
+
+/* +=====================+*/
+/* |Overlapping triangles|*/
+/* +=====================+*/
+.triangle-container {
+    width: 50%;
+    height: 100vh; 
+    position: relative;
+    z-index: -1;
+}
+
+.triangle-container::before,
+.triangle-container::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.triangle-container::before {
+    border-top: 70vh solid #ECF2FF;
+    border-bottom: 30vh solid #ECF2FF;
+    border-left: 70vw solid white;
+    /* top: 0;
+    left: 0; */
+}
+
+.triangle-container::after {
+    /* top: 2vh ; */
+    margin-top: 2vh;
+    border-top: 67vh solid transparent;
+    border-bottom: 30vh solid transparent;
+    border-left: 68vw solid #E3DFFD;
+    /* top: 0;
+    left: 0; */
+}
+
+
+.text-area{
+    position: absolute;
+    top: 43%;
+    left: 20%;
+}
+
+p{
+    
+    font-size: 2rem;
+    font-family: 'Bigelow Rules', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+}
+
+button{
+    font-size: 1.3rem;
+    margin-top: 0px;
+    font-family: 'Bigelow Rules', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+}
+
+#changing-text {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
