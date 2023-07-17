@@ -1,17 +1,17 @@
 body{
-    background-color: #ECF2FF;
+    background-color: white;
     margin: 0;
 }
 
 #left-div{
-    width: 50%;
+    width: 75%;
     height: 100vh; /* Sets the height to 100% of the viewport height */
     background-color: transparent;
     float: left; /* Floats the div to the left */
 }
 
 #right-div{
-    width: 50%;
+    width: 25%;
     height: 100vh; /* Sets the height to 100% of the viewport height */
     background-color: transparent;
     float: left; /* Floats the div to the left */
@@ -32,7 +32,7 @@ body{
 /* +=====================+*/
 .triangle-container {
     width: 50%;
-    height: 100vh; 
+    height: 0vh; 
     position: relative;
     z-index: -1;
 }
@@ -45,48 +45,79 @@ body{
     height: 0;
 }
 
+/* Outer Triangle */
 .triangle-container::before {
-    border-top: 70vh solid #ECF2FF;
-    border-bottom: 30vh solid #ECF2FF;
-    border-left: 70vw solid white;
+    border-top: 70vh solid #9BABB8;
+    border-bottom: 30vh solid #9BABB8;
+    border-left: 70vw solid transparent;
     /* top: 0;
     left: 0; */
 }
 
+/* Inner Triangle*/
 .triangle-container::after {
     /* top: 2vh ; */
     margin-top: 2vh;
     border-top: 67vh solid transparent;
     border-bottom: 30vh solid transparent;
-    border-left: 68vw solid #E3DFFD;
+    border-left: 68vw solid #EEE3CB;
     /* top: 0;
     left: 0; */
 }
 
-
+/* +=========+*/
+/* |Text Area|*/
+/* +=========+*/    
 .text-area{
     position: absolute;
-    top: 43%;
-    left: 20%;
+    top: 45%;
+    left: 15%;
 }
 
 p{
     
     font-size: 2rem;
-    font-family: 'Bigelow Rules', cursive;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lumanosimo', cursive;
 }
 
-button{
+.my-button{
     font-size: 1.3rem;
     margin-top: 0px;
-    font-family: 'Bigelow Rules', cursive;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Lumanosimo', cursive;
+    cursor: pointer;
+    transition: transform 0.3s;
+    
 }
+
+.my-button:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+}
+
 
 #changing-text {
     transition: opacity 0.5s;
-    opacity: 0;
+    opacity: 1;
+}
+
+/* +==========+*/
+/* |Moving Bar|*/
+/* +==========+*/ 
+.bar {
+    width: 75vw;
+    height: 30px;
+    background-color: #F31559;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: sweep 3s linear infinite;
+    z-index: -1;
+}
+
+@keyframes sweep {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
