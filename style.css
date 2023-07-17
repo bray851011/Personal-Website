@@ -4,16 +4,18 @@ body{
 }
 
 #left-div{
-    width: 75%;
+    width: 70%;
     height: 100vh; /* Sets the height to 100% of the viewport height */
     background-color: transparent;
+    margin-right: 0;
     float: left; /* Floats the div to the left */
 }
 
 #right-div{
-    width: 25%;
+    width: 30%;
     height: 100vh; /* Sets the height to 100% of the viewport height */
-    background-color: transparent;
+    background-color: #9BABB8;
+    margin-left: 0;
     float: left; /* Floats the div to the left */
 }
 
@@ -32,7 +34,7 @@ body{
 /* +=====================+*/
 .triangle-container {
     width: 50%;
-    height: 0vh; 
+    height: 100vh; 
     position: relative;
     z-index: -1;
 }
@@ -75,7 +77,6 @@ body{
 }
 
 p{
-    
     font-size: 2rem;
     font-family: 'Lumanosimo', cursive;
 }
@@ -83,14 +84,43 @@ p{
 .my-button{
     font-size: 1.3rem;
     margin-top: 0px;
+    margin-left: 5%;
     font-family: 'Lumanosimo', cursive;
     cursor: pointer;
     transition: transform 0.3s;
-    
+    background-color: #9BABB8;
+    color: white;
+    border: none;
+    border-radius: 12px;
 }
 
 .my-button:hover {
     transform: scale(1.1); /* Increase size by 10% */
+}
+
+.my-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.my-button span:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.my-button:hover span {
+    padding-right: 30px;
+}
+
+.my-button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 
