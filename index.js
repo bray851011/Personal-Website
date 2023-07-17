@@ -1,5 +1,5 @@
 const textContainer = document.getElementById('changing-text');
-const strings = ["programmer", "challenger"]; // The strings to switch between
+const strings = ["Dreamer", "Executor", "Programmer"]; // The strings to switch between
 let currentIndex = 0; // Index to keep track of the current string
 
 function switchText() {
@@ -12,3 +12,4 @@ function switchText() {
 }
 
 setInterval(switchText, 3000); // Switch every 3 seconds (3000 milliseconds)
+// setTimeout(setInterval(switchText, 3000), 3000);
