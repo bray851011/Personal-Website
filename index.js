@@ -1,5 +1,5 @@
 const textContainer = document.getElementById('changing-text');
-const strings = ["Dreamer", "Executor", "Programmer"]; // The strings to switch between
+const strings = ["a Dreamer", "an Executor", "a Programmer"]; // The strings to switch between
 let currentIndex = 0; // Index to keep track of the current string
 
 function switchText() {
